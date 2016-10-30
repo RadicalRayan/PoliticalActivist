@@ -51,6 +51,26 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 
         ab = getSupportActionBar();
     }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        if (position == 3) {
+            Intent transfer = new Intent(this, activity_vote_rayan.class);
+            startActivity(transfer);
+        } else if (position == 0) {
+            Intent transfer = new Intent(this, MainActivity.class);
+            startActivity(transfer);
+        } else if (position == 1) {
+            Intent transfer = new Intent(this, activity_ASB_advice.class);
+            startActivity(transfer);
+        } else if (position == 2) {
+            Intent transfer = new Intent(this, activity_clubs.class);
+            startActivity(transfer);
+        } else if (position == 4) {
+            Intent transfer = new Intent(this, activity_share.class);
+            startActivity(transfer);
+        }
+    }
 }
 
 class SingleItem {
@@ -123,23 +143,4 @@ class ListViewAdapter extends BaseAdapter {
         return true;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (position == 3) {
-            Intent transfer = new Intent(this, activity_vote_rayan.class);
-            startActivity(transfer);
-        } else if (position == 0) {
-            Intent transfer = new Intent(this, MainActivity.class);
-            startActivity(transfer);
-        } else if (position == 1) {
-            Intent transfer = new Intent(this, activity_ASB_advice.class);
-            startActivity(transfer);
-        } else if (position == 2) {
-            Intent transfer = new Intent(this, activity_clubs.class);
-            startActivity(transfer);
-        } else if (position == 4) {
-            Intent transfer = new Intent(this, activity_share.class);
-            startActivity(transfer);
-        }
-    }
 }
