@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MakeAccount" />
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".ContactCongress" />
+        <activity android:name=".YourVoice" />
+        <activity android:name=".LearnMore"></activity>
     </application>
 
 </manifest>

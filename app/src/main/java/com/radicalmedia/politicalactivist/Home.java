@@ -50,27 +50,40 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         setSupportActionBar(myToolbar);
 
         ab = getSupportActionBar();
+        ab.setHomeButtonEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setHomeAsUpIndicator(R.drawable.ic_action_draw_open);
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        if (position == 3) {
-            Intent transfer = new Intent(this, activity_vote_rayan.class);
-            startActivity(transfer);
-        } else if (position == 0) {
-            Intent transfer = new Intent(this, MainActivity.class);
+        if (position == 0) {
+            Intent transfer = new Intent(this, Home.class);
             startActivity(transfer);
         } else if (position == 1) {
-            Intent transfer = new Intent(this, activity_ASB_advice.class);
+            Intent transfer = new Intent(this, ContactCongress.class);
             startActivity(transfer);
         } else if (position == 2) {
-            Intent transfer = new Intent(this, activity_clubs.class);
+            Intent transfer = new Intent(this, YourVoice.class);
             startActivity(transfer);
-        } else if (position == 4) {
-            Intent transfer = new Intent(this, activity_share.class);
+        } else if (position == 3) {
+            Intent transfer = new Intent(this, LearnMore.class);
             startActivity(transfer);
         }
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int res_id = item.getItemId();
+        if(res_id == 16908332) {
+            drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+            drawerLayout.openDrawer(Gravity.LEFT);
+        }
+
+        return true;
+    }
+
 }
 
 class SingleItem {
@@ -131,16 +144,4 @@ class ListViewAdapter extends BaseAdapter {
         description.setText(temp.description);
         return null;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int res_id = item.getItemId();
-        if(res_id == 16908332) {
-            drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawerLayout.openDrawer(Gravity.LEFT);
-        }
-
-        return true;
-    }
-
 }

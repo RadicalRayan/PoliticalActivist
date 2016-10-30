@@ -2,6 +2,7 @@
     <string name="app_name">PoliticalActivist</string>
     <string-array name="navOptions">
         <item>Home</item>
+        <item>Contact Congress</item>
         <item>Your Voice</item>
         <item>Learn More</item>
     </string-array>
