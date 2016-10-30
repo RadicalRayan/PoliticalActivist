@@ -5,4 +5,14 @@
         <item>Your Voice</item>
         <item>Learn More</item>
     </string-array>
+    <string-array name="titles">
+        <item>Hearing: Field Hearing on Tribal Prosperity and Self-Determination through Energy Development</item>
+    </string-array>
+    <string-array name="dates">
+        <item>October 4, 2016</item>
+    </string-array>
+    <string-array name="descriptions">
+        <item>The Committee on Natural Resources held a meeting to focus on several themes, including: the beneficial impact of energy resource development on tribal economies; how tribes currently manage their energy resources; and obstacles such as federal regulations, delays, and lack of energy resource data and information that hinder the ability of tribes to realize the full potential of their energy resources for the benefit of their members and the country.
+</item>
+    </string-array>
 </resources>

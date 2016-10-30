@@ -16,7 +16,8 @@ public class Launch extends AppCompatActivity {
             Intent makeAccount = new Intent(this, MakeAccount.class);
             startActivity(makeAccount);
         } else {
-
+            Intent makeAccount = new Intent(this, Home.class);
+            startActivity(makeAccount);
         }
     }
 }

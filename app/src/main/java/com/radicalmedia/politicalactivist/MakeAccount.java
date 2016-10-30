@@ -1,6 +1,7 @@
 package com.radicalmedia.politicalactivist;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +32,9 @@ public class MakeAccount extends AppCompatActivity {
         myToolbar.setTitleTextAppearance(this, R.style.MyTitleTextAppearance);
         setSupportActionBar(myToolbar);
 
+        final Context context = this;
+        final Intent makeAccount = new Intent(context, Home.class);
+
         ab = getSupportActionBar();
         //ab.setHomeButtonEnabled(true);
         //ab.setDisplayHomeAsUpEnabled(true);
@@ -52,12 +56,15 @@ public class MakeAccount extends AppCompatActivity {
                         FileOutputStream outputStream;
 
                         try {
+
                             outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
                             outputStream.write(string.getBytes());
                             outputStream.close();
+
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        startNextActivity(context, makeAccount);
                     } else {
                         Toast.makeText(getApplicationContext(), "Please enter your age.", Toast.LENGTH_SHORT).show();
                     }
@@ -68,5 +75,10 @@ public class MakeAccount extends AppCompatActivity {
         }); {
 
         }
+    }
+
+    private void startNextActivity(Context c, Intent makeAccount) {
+        Toast.makeText(c, "Thank you for registering!", Toast.LENGTH_SHORT).show();
+        startActivity(makeAccount);
     }
 }
