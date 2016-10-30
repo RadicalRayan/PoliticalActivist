@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Home extends AppCompatActivity implements Adapter{
+public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     android.support.v7.app.ActionBar ab;
     ListView listView;
