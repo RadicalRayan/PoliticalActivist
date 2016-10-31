@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     android.support.v7.app.ActionBar ab;
     ListView listView;
@@ -43,6 +43,8 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navListView = (ListView) findViewById(R.id.left_drawer);
         objs = getResources().getStringArray(R.array.navOptions);
+        navListView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, objs));
+        navListView.setOnItemClickListener(this);
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.home_toolbar);
         myToolbar.setTitle("Current Activity");
@@ -83,7 +85,6 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 
         return true;
     }
-
 }
 
 class SingleItem {
@@ -142,6 +143,6 @@ class ListViewAdapter extends BaseAdapter {
         title.setText(temp.title);
         date.setText(temp.date);
         description.setText(temp.description);
-        return null;
+        return row;
     }
 }

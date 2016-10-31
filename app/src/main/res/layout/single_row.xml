@@ -14,22 +14,21 @@
         android:textColor="#000000"/>
 
     <TextView
-        android:text="This is the description of the current thing being described. It is currently a placeholder, but will be soon filled with "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtTitle"
-        android:layout_alignParentStart="true"
-        android:id="@+id/txtDescription"/>
-
-    <TextView
         android:text="Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/txtDate"
         android:textSize="20sp"
-        android:layout_alignBaseline="@+id/txtTitle"
-        android:layout_alignBottom="@+id/txtTitle"
-        android:layout_alignParentEnd="true"
-        android:gravity="right"/>
+        android:gravity="right"
+        android:layout_below="@+id/txtTitle"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="This is the description of the current thing being described. It is currently a placeholder, but will be soon filled with "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDescription"
+        android:layout_below="@+id/txtDate"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
