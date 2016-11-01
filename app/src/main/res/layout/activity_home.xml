@@ -40,7 +40,7 @@
             android:background="#F0F0F0"
             android:id="@+id/list_home"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="46dp"
+            android:layout_marginTop="56dp"
             android:layout_marginRight="16dp">
         </ListView>
     </ScrollView>

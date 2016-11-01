@@ -11,13 +11,14 @@ public class Launch extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
 
-        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
+        Boolean isFirstRun = getSharedPreferences("com.radicalmedia.politicalactivist", MODE_PRIVATE).getBoolean("isFirstRun", true);
         if (isFirstRun) {
+            getSharedPreferences("com.radicalmedia.politicalactivist", MODE_PRIVATE).edit().putBoolean("isFirstRun", false).apply();
             Intent makeAccount = new Intent(this, MakeAccount.class);
             startActivity(makeAccount);
         } else {
-            Intent makeAccount = new Intent(this, Home.class);
-            startActivity(makeAccount);
+            Intent goHome = new Intent(this, Home.class);
+            startActivity(goHome);
         }
     }
 }
