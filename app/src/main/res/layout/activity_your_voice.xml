@@ -231,7 +231,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Your Email (optional):"
+                android:text="Requested Recipient (optional):"
                 android:id="@+id/textView14"
                 android:layout_below="@+id/editText8"
                 android:layout_alignParentLeft="true"
@@ -254,7 +254,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit Advice"
+                android:text="Submit"
                 android:id="@+id/btnSub"
                 android:layout_below="@+id/editText9"
                 android:layout_centerHorizontal="true"
